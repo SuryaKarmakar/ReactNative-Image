@@ -20,7 +20,9 @@ export default function App() {
         // defaultSource={require('./src/images/logo.png')}
         source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
         // onLoad={() => alert('yes')}  
+        // resizeMode='center'
         />  
+
     </View>
   );
 }
