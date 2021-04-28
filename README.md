@@ -9,7 +9,7 @@
 source={require('./src/images/logo.png')}
 ```
 </li>
-<li><p>If we set image source from <b>remote URL</b>, then we need to specify the full URL link as a <b>uri</b>format</p>
+<li><p>If we set image source from <b>remote URL</b>, then we need to specify the full URL link as a <b>uri</b> format</p>
 
 ```js
 source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
