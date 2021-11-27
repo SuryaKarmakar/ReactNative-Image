@@ -1,69 +1,84 @@
 # React Native Image Component
 
-## Image Source :
-<p>The image source either a remote <b>URL</b> or a <b>local</b> file resource</p>
-<ul>
-<li><P>If we set image source from <b>local file</b>, then we need to specify the full local image <b>path</b> into <b>require()</b> function</P>
+## Usage :
+
+The image source either a remote <b>URL</b> or a <b>local</b> file resource.
+
+- If we set image source from <b>local file</b>, then we need to specify the full local image <b>path</b> into <b>require()</b> function.
 
 ```js
-source={require('./src/images/logo.png')}
+<Image source={require("./src/images/logo.png")} />
 ```
-</li>
-<li><p>If we set image source from <b>remote URL</b>, then we need to specify the full URL link as a <b>uri</b> format</p>
+
+- If we set image source from <b>remote URL</b>, then we need to specify the full URL link as a <b>uri</b> format.
 
 ```js
-source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
+<Image source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }} />
 ```
-</li>
-</ul>
 
-# Props 
+# Props
 
 ## blurRadius :
-<p>blurRadius: the blur radius of the blur filter added to the image. basically it blur the image view</p>
+
+blurRadius: the blur radius of the blur filter added to the image. basically it blur the image view.
 
 ```js
-blurRadius={2}
+<Image
+  blurRadius={2}
+  source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+/>
 ```
+
 ## defaultSource :
-<p>A static image to display while loading the image source.</p>
+
+A static image to display while loading the image source.
 
 ```js
-defaultSource={require('./src/images/logo.png')}
+<Image
+  defaultSource={require("./src/images/logo.png")}
+  source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+/>
 ```
+
 ## onLoad :
-<p>Invoked when load completes successfully</p>
+
+Invoked when load completes successfully.
 
 ```js
-onLoad={() => alert('yes')} 
+<Image
+  source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+  onLoad={() => alert("img loaded")}
+/>
 ```
+
 ## resizeMode :
-<ul>
-<li><b>cover:</b> Scale the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).</li>
-<li><b>contain:</b> Scale the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).</li>
-<li><b>stretch:</b> Scale width and height independently, This may change the aspect ratio of the src.</li>
-<li><b>repeat:</b> Repeat the image to cover the frame of the view. The image will keep its size and aspect ratio, unless it is larger than the view, in which case it will be scaled down uniformly so that it is contained in the view.</li>
-<li><b>center:</b> Center the image in the view along both dimensions. If the image is larger than the view, scale it down uniformly so that it is contained in the view.</li>
-</ul>
+
+- <b>cover:</b> Scale the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or larger than the corresponding dimension of the view (minus padding).
+
+- <b>contain:</b> Scale the image uniformly (maintain the image's aspect ratio) so that both dimensions (width and height) of the image will be equal to or less than the corresponding dimension of the view (minus padding).
+
+- <b>stretch:</b> Scale width and height independently, This may change the aspect ratio of the src.
+
+- <b>repeat:</b> Repeat the image to cover the frame of the view. The image will keep its size and aspect ratio, unless it is larger than the view, in which case it will be scaled down uniformly so that it is contained in the view.
+
+- <b>center:</b> Center the image in the view along both dimensions. If the image is larger than the view, scale it down uniformly so that it is contained in the view.
+
+- enum('cover', 'contain', 'stretch', 'repeat', 'center') ... 'cover' is default.
 
 ```js
-resizeMode='center'
+<Image
+  resizeMode="center"
+  source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+/>
 ```
+
 ## style :
-<p>this props style the image view. like width and height size, borderradious etc</p>
+
+This props style the image view. like width and height size, borderradious etc.
 
 ```js
-style={{width:100, height:100}}
+<Image
+  style={{ width: 100, height: 100 }}
+  source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}
+/>
 ```
-## Usage
-```
- $ git clone https://github.com/SuryaKarmakar/React-Native-Image.git
- $ cd React-Native-Image
- $ npm install 
- $ npm run [web, android, ios]
-```
-## Run with Expo 
-```
- $ expo start --[web, android, ios]
-```
-
