@@ -1,5 +1,7 @@
 # React Native Image Component
 
+A React component for displaying different types of images, including network images, static resources, temporary local images, and images from local disk, such as the camera roll.
+
 ## Usage :
 
 The image source either a remote <b>URL</b> or a <b>local</b> file resource.
@@ -83,7 +85,7 @@ This props style the image view. like width and height size, borderradious etc.
 />
 ```
 
-## GIF and WebP support on Android​ :
+## GIF and WebP support on Android :
 
 When building your own native code, GIF and WebP are not supported by default on Android.
 
